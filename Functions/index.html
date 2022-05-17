@@ -142,6 +142,7 @@
 </script>
 -->
 
+<!--
 <script>
     let fun_one = (param1,param2,param3)=>{
         console.log( param1,param2,param3 );
@@ -152,6 +153,240 @@
     fun_one(undefined,"Hello_2");                               //undefined 'Hello_2' undefined
     fun_one(null,null,null);                                    //null null null
 </script>
+-->
+
+<!--
+<script>
+    let fun_one = (param1,param2,param3)=>{
+        console.log( param1(), param2(), param3() );
+    };
+    fun_one(()=>{
+        return "Hello_1";
+    }, ()=>{
+        return "Hello_2";
+    }, ()=>{
+        return "Hello_3";
+    });
+    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+<!--
+    Rest Parameter / Spread Operator
+    ********************************
+    ... called as Spread Operator
+    This Operator introduced in ES6
+    it is used to store more than one value
+    parameter behaves like array
+    each functions allows only one spread operator
+    spread operator position should be last
+-->
+
+<!--
+<script>
+    function fun_one(...param1){
+        console.log(param1);
+    }
+    fun_one("Hello","Welcome");                     //['Hello', 'Welcome']
+    fun_one("Hello_1","Hello_2","Hello_3");         //['Hello_1', 'Hello_2', 'Hello_3']
+    fun_one(100,200,300);                           //[100, 200, 300]
+    fun_one();                                      //[]
+    fun_one(undefined,null);                        //[undefined, null]
+    fun_one(undefined,null,undefined);              //[undefined, null, undefined]
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...param1,...param2){
+
+    }
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(...param2,param1){
+
+    }
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(param1,...param2){
+        console.log(param1,param2);
+    }
+    fun_one("Hello_1","Hello_2");                       //Hello_1 ['Hello_2']
+    fun_one();                                          //undefined []
+    fun_one("Hello_1","Hello_2","Hello_3");             //Hello_1  ['Hello_2', 'Hello_3']
+    fun_one(undefined,undefined);                       //undefined [undefined]
+    fun_one(null,null,null);                            //null [null, null]
+</script>
+-->
+
+
+<!--
+    Default Parameters in Functions
+    *******************************
+        while defining the functions, we will initilize the parameters with default values
+        this concept also introduced in ES6
+-->
+
+
+<!--
+<script>
+    function fun_one(param1="Hello_1",
+                     param2="Hello_2",
+                     param3="Hello_3"){
+        console.log(param1,param2,param3);
+    }
+    fun_one();                                            //Hello_1 Hello_2 Hello_3
+    fun_one("Welcome_1","Welcome_2","Welcome_3");         //Welcome_1 Welcome_2 Welcome_3
+    fun_one(undefined,undefined,undefined);               //Hello_1 Hello_2 Hello_3
+    fun_one(null,null,null);                              //null null null
+    fun_one(undefined,"Welcome_2");                       //Hello_1 Welcome_2 Hello_3
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(param1,param2="Hello_2",...param3){
+        console.log(param1,param2,param3);
+    }
+    fun_one();                                      //undefined 'Hello_2' []
+    fun_one(undefined,undefined,undefined);         //undefined 'Hello_2' [undefined]
+    fun_one(null,null,null);                        //null null [null]
+    fun_one("Hello_1",undefined,"Hello_3");         //Hello_1 Hello_2 ['Hello_3']
+</script>
+-->
+
+
+
+<!--
+    constructor functions
+    *********************
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
